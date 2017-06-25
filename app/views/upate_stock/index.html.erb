@@ -1,0 +1,46 @@
+
+<div class= "DisplyRef">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Reference Stock</th>
+        <th>Quantite disponible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @s.each do |elem| %>
+      <tr>
+        <td><%= elem[:ref_stock] %></td>
+        <td><%= elem[:quantity] %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class= "DisplyHisto">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date de la modification</th>
+        <th>Acienne Quantite</th>
+        <th>Nouvelle Quantite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @s2.each do |e| %>
+      <tr>
+        <td><%= e[:updated_at] %></td>
+        <td><%= e[:old_stock] %></td>
+        <td><%= e[:new_stock] %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= form_tag(upate_stock_index_path, :method => "post") do %>
+    <%= label_tag :nouvelle_quantite %>
+    <%= number_field_tag :new_stock %>
+    <%= submit_tag "Submit" %>
+<% end %>

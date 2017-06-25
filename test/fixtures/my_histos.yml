@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  my_stock: one
+  ref_stock: MyString
+  old_stock: 1
+  new_stock: 1
+
+two:
+  my_stock: two
+  ref_stock: MyString
+  old_stock: 1
+  new_stock: 1

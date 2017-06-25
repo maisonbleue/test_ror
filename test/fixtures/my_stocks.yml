@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ref_stock: MyString
+  quantity: 1
+
+two:
+  ref_stock: MyString
+  quantity: 1

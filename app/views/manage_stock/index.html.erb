@@ -1,0 +1,19 @@
+
+<table>
+  <thead>
+    <th>Reference</th>
+    <th>Quantite</th>
+  </thead>
+  <% @items.each do |item| %>
+  <tr>
+    <td><%= link_to "#{item[:ref_stock]}", upate_stock_index_path(:ref_stock => item[:ref_stock]) %></td>
+    <td><%= item[:quantity] %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= form_tag(manage_stock_index_path, :method => "post") do %>
+    <%= label_tag :nouvelle_reference %>
+    <%= text_field_tag :new_stock %>
+    <%= submit_tag "Submit" %>
+<% end %>
