@@ -20,3 +20,18 @@ $> rake db:create
 $> rake db:migrate
 $> rails server
 ```
+
+Routes
+---
+
+```
+GET localhost:3000/manage_stock/index
+GET localhost:3000/upate_stock/index?ref_stock='REF_STOCK'
+
+API:
+
+POST localhost:3000/api/v1/stocks
+GET localhost:3000/api/v1/stocks/'REF_STOCK'
+GET localhost:3000/api/v1/histo/'REF_STOCK'
+
+```
